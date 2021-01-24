@@ -1,0 +1,4 @@
+﻿entity.games.littlechestnut:gobbler.name=Gobbler
+item.spawn_egg.entity.games.littlechestnut:gobbler.name=Spawn Gobbler
+games.littlechestnut:action.stay=Stay here
+games.littlechestnut:action.follow=Follow me

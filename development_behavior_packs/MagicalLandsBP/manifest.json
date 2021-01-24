@@ -1,0 +1,31 @@
+{
+   "format_version" : 2,
+   "header" : {
+      "description" : "A more magical Minecraft experience.",
+      "name" : "MagicalLands",
+      "platform_locked" : false,
+      "uuid" : "c9aaecda-e4dd-4505-b322-cca3c87eaf42",
+      "version" : [ 0, 0, 1 ],
+      "min_engine_version" : [ 1, 16, 0 ]
+   },
+   "dependencies": [
+       {
+           "uuid": "100f3eae-651c-4ab2-9f11-0ecf3f968ba2",
+           "version": [0, 0, 1]
+        }
+   ],
+   "modules" : [
+      {
+         "description" : "",
+         "type" : "data",
+         "uuid" : "d93308dd-5c6e-4dec-a248-978e629b772a",
+         "version" : [ 0, 0, 1 ]
+      }
+   ],
+   "metadata": {
+       "authors": [
+           "LittleChestnut Games"
+       ],
+       "license": "MIT"
+   }
+}

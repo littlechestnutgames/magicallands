@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "games.littlechestnut:gobbler",
+      "materials": { "default": "skeleton" },
+      "textures": {
+        "default": "textures/entity/gobbler/gobbler"
+      },
+      "geometry": {
+        "default": "geometry.gobbler"
+      },
+      "animations": {
+        "move": "controller.animation.gobbler.move",
+        "walk": "animation.gobbler.walk",
+        "top_wobble": "animation.gobbler.top_wobble",
+        "blink": "animation.gobbler.blink"
+      },
+      "scripts": {
+        "animate": [
+          "move",
+          "blink"
+        ]
+      },
+      "render_controllers": [ "controller.render.gobbler" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 6
+      }
+    }
+  }
+}
