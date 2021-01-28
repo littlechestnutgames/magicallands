@@ -25,6 +25,16 @@
                     "weight": 1
                 }
             ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "games.littlechestnut:empty_soulfire_bottle",
+                    "weight": 1
+                }
+            ]
         }
     ]
 }

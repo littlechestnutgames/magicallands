@@ -1,0 +1,17 @@
+{
+   "resource_pack_name" : "MagicalLands",
+   "texture_data" : {
+      "soulfire_bottle" : {
+         "textures" : [
+            "textures/items/empty_soulfire_bottle",
+            "textures/items/soulfire_bottle"
+         ]
+      },
+      "gobbler_icon": {
+         "textures": [
+            "textures/items/gobbler"
+         ]
+      }
+   },
+   "texture_name" : "atlas.items"
+}

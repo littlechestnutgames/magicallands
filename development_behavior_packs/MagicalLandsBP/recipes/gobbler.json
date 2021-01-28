@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "games.littlechestnut:gobbler_spawn_egg"
+      },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "sas",
+        "s s"
+      ],
+      "key": {
+        "s": {
+          "item": "minecraft:stick"
+        },
+        "a": {
+          "item": "minecraft:apple"
+        }
+      },
+      "result": {
+        "item": "games.littlechestnut:gobbler_spawn_egg"
+      }
+    }
+  }
+  

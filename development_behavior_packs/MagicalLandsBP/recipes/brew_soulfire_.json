@@ -1,0 +1,12 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "games.littlechestnut:brew_soulfire_bottle"
+    },
+    "tags": [ "brewing_stand" ],
+    "input": "games.littlechestnut:empty_soulfire_bottle",
+    "reagent": "minecraft:soul_sand",
+    "output": "games.littlechestnut:soulfire_bottle"
+  }
+}

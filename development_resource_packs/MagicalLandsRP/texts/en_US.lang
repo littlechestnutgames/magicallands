@@ -1,4 +1,7 @@
 ﻿entity.games.littlechestnut:gobbler.name=Gobbler
-item.spawn_egg.entity.games.littlechestnut:gobbler.name=Spawn Gobbler
+item.spawn_egg.entity.games.littlechestnut:gobbler.name=Gobbler
 games.littlechestnut:action.stay=Stay here
 games.littlechestnut:action.follow=Follow me
+item.games.littlechestnut:empty_soulfire_bottle=Empty Soulfire Bottle
+item.games.littlechestnut:soulfire_bottle=Soulfire Bottle
+entity.villager.apiarist=Apiarist
