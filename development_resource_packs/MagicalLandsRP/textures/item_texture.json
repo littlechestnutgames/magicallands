@@ -1,4 +1,5 @@
 {
+   "format_version": "1.16.0",
    "resource_pack_name" : "MagicalLands",
    "texture_data" : {
       "soulfire_bottle" : {
@@ -11,6 +12,11 @@
          "textures": [
             "textures/items/gobbler"
          ]
+      },
+      "smoker": {
+        "textures": [
+	  "textures/items/smoker"
+	]
       }
    },
    "texture_name" : "atlas.items"

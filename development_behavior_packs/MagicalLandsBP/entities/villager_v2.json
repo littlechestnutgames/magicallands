@@ -1722,9 +1722,9 @@
       },
       "work_at_beehive": {
         "run_command": {
-          "command": "say Hello.",
-          "target": "self"
-        }
+          	"command": "say Hello.",
+        	"target": "self"
+	}
       },
       "become_zombie": {
         "sequence": [

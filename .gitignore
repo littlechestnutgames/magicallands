@@ -4,4 +4,4 @@ skin_packs
 *.dat
 *.*~
 Screenshots
-
+.DS_Store
