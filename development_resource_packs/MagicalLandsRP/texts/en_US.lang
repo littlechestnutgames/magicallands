@@ -1,7 +1,11 @@
-﻿entity.games.littlechestnut:gobbler.name=Gobbler
-item.spawn_egg.entity.games.littlechestnut:gobbler.name=Gobbler
-games.littlechestnut:action.stay=Stay here
-games.littlechestnut:action.follow=Follow me
-item.games.littlechestnut:empty_soulfire_bottle=Empty Soulfire Bottle
-item.games.littlechestnut:soulfire_bottle=Soulfire Bottle
+﻿entity.glc:gobbler.name=Gobbler
+item.spawn_egg.entity.glc:gobbler.name=Gobbler
+glc:action.stay=Stay here
+glc:action.follow=Follow me
+item.glc:empty_soulfire_bottle=Empty Soulfire Bottle
+item.glc:soulfire_bottle=Soulfire Bottle
 entity.villager.apiarist=Apiarist
+tile.glc:white_mushroom_block.name=White Mushroom Block
+tile.glc:white_mushroom_gills.name=White Mushroom Gills
+tile.glc:white_mushroom_stem.name=White Mushroom Stem
+item.glc:white_mushroom=White Mushroom

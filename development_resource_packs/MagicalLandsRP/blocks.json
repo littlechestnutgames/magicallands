@@ -1,0 +1,35 @@
+{
+   "glc:white_mushroom_block" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "white_mushroom_top",
+         "side" : "white_mushroom_top",
+         "up" : "white_mushroom_top"
+      }
+   },
+   "glc:white_mushroom_gills": {
+      "sound": "wood",
+      "textures": {
+         "up": "white_mushroom_gills",
+         "down": "white_mushroom_gills",
+         "north": "white_mushroom_gills",
+         "south": "white_mushroom_gills",
+         "east": "white_mushroom_gills_side",
+         "west": "white_mushroom_gills_side"
+      }
+   },
+   "glc:white_mushroom_stem": {
+      "sound": "wood",
+      "textures": {
+         "up": "white_mushroom_top",
+         "down": "white_mushroom_top",
+         "side": "white_mushroom_stem"
+      }
+   },
+   "glc:white_mushroom_planted": {
+      "sound": "grass"
+   },
+   "glc:white_mushroom": {
+      "sound": "grass"
+   }
+}

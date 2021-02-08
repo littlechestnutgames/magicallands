@@ -2,7 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "games.littlechestnut:soulfire_bottle"
+            "identifier": "glc:soulfire_bottle"
         },
         "components": {
             "minecraft:icon": {

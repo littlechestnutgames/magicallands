@@ -2,7 +2,7 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
       "description": {
-      "identifier": "games.littlechestnut:gobbler_spawn_egg"
+      "identifier": "glc:gobbler_spawn_egg"
       },
       "tags": [ "crafting_table" ],
       "pattern": [
@@ -18,7 +18,7 @@
         }
       },
       "result": {
-        "item": "games.littlechestnut:gobbler_spawn_egg"
+        "item": "glc:gobbler_spawn_egg"
       }
     }
   }

@@ -15,8 +15,11 @@
       },
       "smoker": {
         "textures": [
-	  "textures/items/smoker"
-	]
+	         "textures/items/smoker"
+	      ]
+      },
+      "white_mushroom": {
+        "textures": "textures/items/white_mushroom"
       }
    },
    "texture_name" : "atlas.items"

@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shapeless": {
     "description": {
-    "identifier": "games.littlechestnut:empty_soulfire_bottle"
+    "identifier": "glc:empty_soulfire_bottle"
     },
     "tags": [ "crafting_table" ],
     "ingredients": [
@@ -23,7 +23,7 @@
       }
     ],
     "result": {
-      "item": "games.littlechestnut:empty_soulfire_bottle"
+      "item": "glc:empty_soulfire_bottle"
     }
   }
 }

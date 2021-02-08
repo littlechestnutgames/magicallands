@@ -1,0 +1,59 @@
+{
+  "minecraft:block" : {
+    "description" : {
+      "identifier" : "glc:white_mushroom_planted"
+    },
+    "components" : {
+      "minecraft:geometry" : "geometry.small_plant",
+      "minecraft:material_instances" : {
+        "*" : {
+          "texture" : "white_mushroom",
+          "render_method" : "alpha_test"
+        }
+      },
+      "minecraft:entity_collision" : false,      
+      "minecraft:block_light_absorption" : 0,
+      "minecraft:block_light_emission" : 0,
+      "minecraft:map_color" : "#FFFFFF",
+      "minecraft:pick_collision" : {
+        "origin" : [ -3, 0, -3 ],
+        "size" : [ 6, 8, 6 ]
+      },
+      "minecraft:loot": "loot_tables/blocks/white_mushroom_planted.json",
+      "minecraft:breakonpush": true,
+      "minecraft:flammable" : {
+        "flame_odds" : 50,
+        "burn_odds" : 50
+      },
+      "minecraft:random_ticking" : {
+        "on_tick" : {
+          "event" : "grow_stage"
+        }
+      },
+      "minecraft:placement_filter" : {
+        "conditions" : [
+          {
+            "block_filter" : [
+              "log",
+              "log2",
+              "podzol",
+              "dirt",
+              "grass",
+              "mycelium"
+            ],
+            "allowed_faces" : [
+              "up"
+            ]
+          }
+        ]
+      },
+      "minecraft:destroy_time" : 0,
+      "minecraft:explosion_resistance" : 0
+    },
+    "events" : {
+      "grow_stage" : {
+      }
+    }
+  },
+  "format_version" : "1.16.0"
+}

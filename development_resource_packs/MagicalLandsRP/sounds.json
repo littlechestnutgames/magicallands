@@ -1,7 +1,7 @@
 {
     "entity_sounds" : {
        "entities" : {
-          "games.littlechestnut:gobbler" : {
+          "glc:gobbler" : {
              "events" : {
                 "ambient.tamed": "gobbler.say",
                 "death" : {

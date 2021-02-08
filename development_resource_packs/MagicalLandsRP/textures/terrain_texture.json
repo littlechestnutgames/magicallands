@@ -1,0 +1,23 @@
+{
+   "num_mip_levels" : 4,
+   "padding" : 8,
+   "resource_pack_name" : "MagicalLands",
+   "texture_data" : {
+       "white_mushroom_top": {
+           "textures": "textures/blocks/white_mushroom_top"
+       },
+       "white_mushroom_gills": {
+        "textures": "textures/blocks/white_mushroom_gills"
+       },
+       "white_mushroom_gills_side": {
+        "textures": "textures/blocks/white_mushroom_gills_side"
+       },
+       "white_mushroom_stem": {
+        "textures": "textures/blocks/white_mushroom_stem"
+       },
+       "white_mushroom": {
+         "textures": "textures/items/white_mushroom"
+       }
+   },
+   "texture_name" : "atlas.terrain"
+}

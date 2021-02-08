@@ -2,18 +2,18 @@
   "format_version": "1.16.100",
   "minecraft:entity": {
     "description": {
-      "identifier": "games.littlechestnut:gobbler",
+      "identifier": "glc:gobbler",
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": true
     },
     "component_groups": {
-      "games.littlechestnut:gobbler_not_activated": {
+      "glc:gobbler_not_activated": {
         "minecraft:loot": {
           "table": "loot_tables/entities/gobbler.json"
         }
       },
-      "games.littlechestnut:gobbler_activated": {
+      "glc:gobbler_activated": {
         "minecraft:ambient_sound_interval" :{
           "event_name" : "ambient.tamed",
           "range" : 6.0,
@@ -98,7 +98,7 @@
           ]
         }
       },
-      "games.littlechestnut:gobbler_follow": {
+      "glc:gobbler_follow": {
         "minecraft:behavior.follow_owner": {},
         "minecraft:behavior.pickup_items": {
           "priority": 0,
@@ -117,16 +117,16 @@
                   { "test": "is_owner", "subject": "other", "value": true }
                 ]
               },
-              "event": "games.littlechestnut:on_gobbler_stay",
+              "event": "glc:on_gobbler_stay",
               "target": "self"
             },
             "swing": true,
             "play_sounds": "",
-            "interact_text": "games.littlechestnut:action.stay"
+            "interact_text": "glc:action.stay"
           }
         }
       },
-      "games.littlechestnut:gobbler_stay": {
+      "glc:gobbler_stay": {
         "minecraft:interact": {
           "interactions": {
             "on_interact": {
@@ -136,12 +136,12 @@
                   { "test": "is_owner", "subject": "other", "value": true }
                 ]
               },
-              "event": "games.littlechestnut:on_gobbler_follow",
+              "event": "glc:on_gobbler_follow",
               "target": "self"
             },
             "swing": true,
             "play_sounds": "",
-            "interact_text": "games.littlechestnut:action.follow"
+            "interact_text": "glc:action.follow"
           }
         }
       },
@@ -174,8 +174,8 @@
         "minecraft:breedable": {
           "require_tame": true,
           "breeds_with": {
-            "mate_type": "games.littlechestnut:gobbler",
-            "baby_type": "games.littlechestnut:gobbler",
+            "mate_type": "glc:gobbler",
+            "baby_type": "glc:gobbler",
             "breed_event": {
               "event": "minecraft:entity_born",
               "target": "baby"
@@ -212,9 +212,9 @@
       },
       "minecraft:tameable": {
         "probability": 1.0,
-        "tame_items": "games.littlechestnut:soulfire_bottle",
+        "tame_items": "glc:soulfire_bottle",
         "tame_event": {
-          "event": "games.littlechestnut:on_gobbler_tamed",
+          "event": "glc:on_gobbler_tamed",
           "target": "self"
         }
       },
@@ -222,9 +222,9 @@
         "priority": 4,
         "speed_multiplier": 1.0,
         "items": [
-          "query.is_tamed ? games.littlechestnut:soulfire_bottle : stick",
-          "query.is_tamed ? games.littlechestnut:soulfire_bottle : apple",
-          "games.littlechestnut:soulfire_bottle"
+          "query.is_tamed ? glc:soulfire_bottle : stick",
+          "query.is_tamed ? glc:soulfire_bottle : apple",
+          "glc:soulfire_bottle"
         ]
       },
       "minecraft:hurt_on_condition": {
@@ -258,28 +258,28 @@
     },
 
     "events": {
-      "games.littlechestnut:on_gobbler_tamed": {
+      "glc:on_gobbler_tamed": {
         "remove": {
           "component_groups": [
-            "games.littlechestnut:gobbler_not_activated"
+            "glc:gobbler_not_activated"
           ]
         },
         "add": {
           "component_groups": [
-            "games.littlechestnut:gobbler_activated",
-            "games.littlechestnut:gobbler_follow"
+            "glc:gobbler_activated",
+            "glc:gobbler_follow"
           ]
         }
       },
-      "games.littlechestnut:on_gobbler_stay": {
+      "glc:on_gobbler_stay": {
         "remove": {
           "component_groups": [
-            "games.littlechestnut:gobbler_follow"
+            "glc:gobbler_follow"
           ]
         },
         "add": {
           "component_groups": [
-            "games.littlechestnut:gobbler_stay"
+            "glc:gobbler_stay"
           ]
         },
         "run_command": {
@@ -287,15 +287,15 @@
             "target": "self"
           }
       },
-      "games.littlechestnut:on_gobbler_follow": {
+      "glc:on_gobbler_follow": {
         "add": {
           "component_groups": [
-            "games.littlechestnut:gobbler_follow"
+            "glc:gobbler_follow"
           ]
         },
         "remove": {
           "component_groups": [
-            "games.littlechestnut:gobbler_stay"
+            "glc:gobbler_stay"
           ]
         },
         "run_command": {"command": "particle minecraft:blue_flame_particle ~ ~1 ~", "target": "self"}
@@ -309,7 +309,7 @@
             "add": {
               "component_groups": [
                 "minecraft:gobbler_adult",
-                "games.littlechestnut:gobbler_not_activated"
+                "glc:gobbler_not_activated"
               ]
             }
           },
@@ -320,7 +320,7 @@
             "add": {
               "component_groups": [
                 "minecraft:gobbler_baby",
-                "games.littlechestnut:gobbler_not_activated"
+                "glc:gobbler_not_activated"
               ]
             }
           }
@@ -333,7 +333,7 @@
         "add": {
           "component_groups": [
             "minecraft:gobbler_baby",
-            "games.littlechestnut:gobbler_activated"
+            "glc:gobbler_activated"
           ]
         }
       },
