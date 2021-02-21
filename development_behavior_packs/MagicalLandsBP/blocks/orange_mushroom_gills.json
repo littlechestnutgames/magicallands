@@ -1,0 +1,68 @@
+{
+    "format_version": "1.16.200.2",
+    "minecraft:block": {
+        "description": {
+            "identifier": "glc:orange_mushroom_gills",
+            "properties": {
+                "glc:facing_direction": [2, 3, 4, 5]
+            },
+            "is_experimental": true
+        },
+        "components": {
+            "minecraft:unit_cube": {},
+            "minecraft:material_instances": {
+                "*": {
+                     "texture": "orange_mushroom_gills",
+                      "render_method": "opaque"
+                },
+                "east": {
+                    "texture": "orange_mushroom_gills",
+                    "render_method": "opaque"
+                },
+                "west": {
+                    "texture": "orange_mushroom_gills",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:loot": "loot_tables/blocks/orange_mushroom_block.json",
+            "minecraft:destroy_time": 0.3,
+            "minecraft:explosion_resistance": 0.2,
+            "minecraft:friction": 0.6,
+            "minecraft:flammable": {
+                "flame_odds": 0.0,
+                "burn_odds": 0.0
+            },
+            "minecraft:map_color": "#2b2a33",
+            "minecraft:block_light_absorption": 1.0,
+            "minecraft:block_light_emission": 0.0,
+            "minecraft:on_player_placing": {
+                "event": "glc:set_facing_direction"
+            }
+        },
+        "permutations": [
+            {
+              "condition": "q.block_property('glc:facing_direction') == 2",
+              "components": { "minecraft:rotation": [ 0, 0, 0 ] }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 3",
+              "components": { "minecraft:rotation": [ 0, 180, 0 ] }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 4",
+              "components": { "minecraft:rotation": [ 0, 90, 0 ] }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 5",
+              "components": { "minecraft:rotation": [ 0, 270, 0 ] }
+            }
+        ],
+        "events": {
+            "glc:set_facing_direction": {
+                "set_block_property": {
+                    "glc:facing_direction": "query.cardinal_facing_2d"
+                }
+            }
+        }
+    }
+}

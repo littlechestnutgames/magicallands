@@ -1,0 +1,139 @@
+{
+  "minecraft:block": {
+    "description": {
+      "identifier": "glc:planted_lemon",
+      "properties": {
+        "glc:growth_stage": [0, 1, 2, 3, 4]
+      }      
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('glc:growth_stage') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_lemon_0",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_lemon_1",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_lemon_2",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_lemon_3",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_lemon_4",
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:loot": "loot_tables/blocks/planted_lemon.json"
+        }
+      }
+    ],
+    "components": {
+      "minecraft:geometry": "geometry.small_plant",
+      "minecraft:loot": "loot_tables/blocks/empty.json",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "planted_lemon_0",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:entity_collision": false,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:block_light_emission": 0,
+      "minecraft:pick_collision": {
+        "origin": [-3, 12, -3],
+        "size": [6, 4, 6]
+      },
+      "minecraft:breakonpush": true,
+      "minecraft:flammable": {
+        "flame_odds": 0,
+        "burn_odds": 0
+      },
+      "minecraft:random_ticking": {
+        "on_tick": {
+          "event": "grow_stage"
+        }
+      },
+      "minecraft:on_interact": {
+        "target": "other",
+        "event": "bonemeal_grow_stage",
+        "condition": "query.get_equipped_item_name == 'bone_meal' && query.block_property('glc:growth_stage') < 4"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [{
+          "block_filter": [
+            "leaves",
+            "leaves2"
+          ],
+          "allowed_faces": [
+            "down"
+          ]
+        }]
+      },
+      "minecraft:destroy_time": 0,
+      "minecraft:explosion_resistance": 0
+    },
+    "events": {
+      "bonemeal_grow_stage": {
+        "sequence": [
+          {"swing": {}},
+          {"decrement_stack": {}},
+          {
+            "trigger": {
+              "event": "grow_stage",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "grow_stage": {
+        "randomize": [
+          { "weight": 1 },
+          {
+            "weight": 1,
+            "set_block_property": {
+              "glc:growth_stage": "(query.block_property('glc:growth_stage') < 4) ? query.block_property('glc:growth_stage') + 1 : 4"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "format_version": "1.16.0"
+}

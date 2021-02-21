@@ -31,5 +31,42 @@
    },
    "glc:white_mushroom": {
       "sound": "grass"
+   },
+
+   "glc:orange_mushroom_block" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "orange_mushroom_top",
+         "side" : "orange_mushroom_top",
+         "up" : "orange_mushroom_top"
+      }
+   },
+   "glc:orange_mushroom_gills": {
+      "sound": "wood",
+      "textures": {
+         "up": "orange_mushroom_gills",
+         "down": "orange_mushroom_gills",
+         "north": "orange_mushroom_gills",
+         "south": "orange_mushroom_gills",
+         "east": "orange_mushroom_gills",
+         "west": "orange_mushroom_gills"
+      }
+   },
+   "glc:orange_mushroom_stem": {
+      "sound": "wood",
+      "textures": {
+         "up": "orange_mushroom_top",
+         "down": "orange_mushroom_top",
+         "side": "orange_mushroom_stem"
+      }
+   },
+   "glc:orange_mushroom_planted": {
+      "sound": "grass"
+   },
+   "glc:orange_mushroom": {
+      "sound": "grass"
+   },
+   "glc:planted_lemon": {
+      "sound": "grass"
    }
 }

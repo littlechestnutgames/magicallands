@@ -1,0 +1,52 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "glc:orange_mushroom"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "orange_mushroom"
+            },
+            "minecraft:block_placer": {
+                "block": "glc:orange_mushroom_planted",
+                "use_on": ["log", "log2", "dirt", "grass", "podzol", "mycelium"]
+            },
+            "minecraft:creative_category":{"parent":"itemGroup.name.nature"},
+            "minecraft:food": {
+                "can_always_eat": true,
+                "nutrition": 1,
+                "saturation_modifier": "poor",
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_duration": 1.5,
+            "minecraft:use_animation": "eat",
+            "minecraft:max_stack_size": 64
+        },
+        "events": {
+            "on_consume": {
+                "sequence": [
+                    {
+                        "add_mob_effect": {
+                            "effect": "nausea",
+                            "duration": 30,
+                            "amplifier": 1,
+                            "target": "holder"
+                        }
+                    },
+                    {
+                        "add_mob_effect": {
+                            "effect": "poison",
+                            "duration": 2,
+                            "amplifier": 1,
+                            "target": "holder"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

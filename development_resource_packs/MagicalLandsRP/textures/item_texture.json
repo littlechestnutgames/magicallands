@@ -20,7 +20,13 @@
       },
       "white_mushroom": {
         "textures": "textures/items/white_mushroom"
-      }
+      },
+      "orange_mushroom": {
+        "textures": "textures/items/orange_mushroom"
+      },
+      "lemon": {
+         "textures": "textures/items/lemon"
+       }
    },
    "texture_name" : "atlas.items"
 }

@@ -25,10 +25,15 @@
         "flame_odds" : 50,
         "burn_odds" : 50
       },
-      "minecraft:random_ticking" : {
-        "on_tick" : {
-          "event" : "grow_stage"
+      "minecraft:random_ticking": {
+        "on_tick": {
+          "event": "grow_stage"
         }
+      },
+      "minecraft:on_interact": {
+        "target": "other",
+        "event": "bonemeal_grow",
+        "condition": "query.get_equipped_item_name == 'bone_meal'"
       },
       "minecraft:placement_filter" : {
         "conditions" : [
@@ -50,8 +55,36 @@
       "minecraft:destroy_time" : 0,
       "minecraft:explosion_resistance" : 0
     },
-    "events" : {
-      "grow_stage" : {
+    "events": {
+      "bonemeal_grow": {
+        "sequence": [
+          {"swing": {}},
+          {"decrement_stack": {}},
+          {
+            "run_command": {
+              "command": "particle minecraft:crop_growth_emitter ~ ~1 ~",
+              "target": "self"
+            }
+          },
+          {
+            "randomize": [
+              { "weight": 3 },
+              {
+                "weight": 1,
+                "run_command": {
+                  "command": "structure load big_white_mushroom ~-4 ~ ~-4",
+                  "target": "self"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "grow_stage": {
+        "run_command": {
+          "command": "structure load big_white_mushroom ~-4 ~ ~-4",
+          "target": "self"
+        }
       }
     }
   },

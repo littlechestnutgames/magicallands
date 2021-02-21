@@ -3,21 +3,51 @@
    "padding" : 8,
    "resource_pack_name" : "MagicalLands",
    "texture_data" : {
-       "white_mushroom_top": {
-           "textures": "textures/blocks/white_mushroom_top"
-       },
-       "white_mushroom_gills": {
-        "textures": "textures/blocks/white_mushroom_gills"
-       },
-       "white_mushroom_gills_side": {
-        "textures": "textures/blocks/white_mushroom_gills_side"
-       },
-       "white_mushroom_stem": {
-        "textures": "textures/blocks/white_mushroom_stem"
-       },
-       "white_mushroom": {
-         "textures": "textures/items/white_mushroom"
-       }
+      "white_mushroom_top": {
+          "textures": "textures/blocks/white_mushroom_top"
+      },
+      "white_mushroom_gills": {
+      "textures": "textures/blocks/white_mushroom_gills"
+      },
+      "white_mushroom_gills_side": {
+      "textures": "textures/blocks/white_mushroom_gills_side"
+      },
+      "white_mushroom_stem": {
+      "textures": "textures/blocks/white_mushroom_stem"
+      },
+      "white_mushroom": {
+        "textures": "textures/items/white_mushroom"
+      },
+      "orange_mushroom_top": {
+        "textures": "textures/blocks/orange_mushroom_top"
+      },
+      "orange_mushroom_gills": {
+        "textures": "textures/blocks/orange_mushroom_gills"
+      },
+      "orange_mushroom_gills_side": {
+        "textures": "textures/blocks/orange_mushroom_gills_side"
+      },
+      "orange_mushroom_stem": {
+        "textures": "textures/blocks/orange_mushroom_stem"
+      },
+      "orange_mushroom": {
+        "textures": "textures/items/orange_mushroom"
+      },
+      "planted_lemon_0": {
+        "textures": "textures/blocks/planted_lemon_0"
+      },
+      "planted_lemon_1": {
+        "textures": "textures/blocks/planted_lemon_1"
+      },
+      "planted_lemon_2": {
+        "textures": "textures/blocks/planted_lemon_2"
+      },
+      "planted_lemon_3": {
+        "textures": "textures/blocks/planted_lemon_3"
+      },
+      "planted_lemon_4": {
+        "textures": "textures/blocks/planted_lemon_4"
+      }
    },
    "texture_name" : "atlas.terrain"
 }
