@@ -7,13 +7,13 @@
           "textures": "textures/blocks/white_mushroom_top"
       },
       "white_mushroom_gills": {
-      "textures": "textures/blocks/white_mushroom_gills"
+        "textures": "textures/blocks/white_mushroom_gills"
       },
       "white_mushroom_gills_side": {
-      "textures": "textures/blocks/white_mushroom_gills_side"
+        "textures": "textures/blocks/white_mushroom_gills_side"
       },
       "white_mushroom_stem": {
-      "textures": "textures/blocks/white_mushroom_stem"
+        "textures": "textures/blocks/white_mushroom_stem"
       },
       "white_mushroom": {
         "textures": "textures/items/white_mushroom"
@@ -32,6 +32,21 @@
       },
       "orange_mushroom": {
         "textures": "textures/items/orange_mushroom"
+      },
+      "magenta_mushroom_top": {
+        "textures": "textures/blocks/magenta_mushroom_top"
+      },
+      "magenta_mushroom_stem": {
+        "textures": "textures/blocks/magenta_mushroom_stem"
+      },
+      "magenta_mushroom_gills": {
+        "textures": "textures/blocks/magenta_mushroom_gills"
+      },
+      "magenta_mushroom_gills_side": {
+        "textures": "textures/blocks/magenta_mushroom_gills_side"
+      },
+      "magenta_mushroom": {
+        "textures": "textures/items/magenta_mushroom"
       },
       "planted_lemon_0": {
         "textures": "textures/blocks/planted_lemon_0"

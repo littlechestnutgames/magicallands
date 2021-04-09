@@ -1,0 +1,92 @@
+{
+  "minecraft:block" : {
+    "description" : {
+      "identifier" : "glc:magenta_mushroom_planted"
+    },
+    "components" : {
+      "minecraft:geometry" : "geometry.small_plant",
+      "minecraft:material_instances" : {
+        "*" : {
+          "texture" : "magenta_mushroom",
+          "render_method" : "alpha_test"
+        }
+      },
+      "minecraft:entity_collision" : false,      
+      "minecraft:block_light_absorption" : 0,
+      "minecraft:block_light_emission" : 0,
+      "minecraft:map_color" : "#FFFFFF",
+      "minecraft:pick_collision" : {
+        "origin" : [ -3, 0, -3 ],
+        "size" : [ 6, 8, 6 ]
+      },
+      "minecraft:loot": "loot_tables/blocks/magenta_mushroom_planted.json",
+      "minecraft:breakonpush": true,
+      "minecraft:flammable" : {
+        "flame_odds" : 50,
+        "burn_odds" : 50
+      },
+      "minecraft:random_ticking": {
+        "on_tick": {
+          "event": "grow_stage"
+        }
+      },
+      "minecraft:on_interact": {
+        "target": "other",
+        "event": "bonemeal_grow",
+        "condition": "query.get_equipped_item_name == 'bone_meal'"
+      },
+      "minecraft:placement_filter" : {
+        "conditions" : [
+          {
+            "block_filter" : [
+              "log",
+              "log2",
+              "podzol",
+              "dirt",
+              "grass",
+              "mycelium"
+            ],
+            "allowed_faces" : [
+              "up"
+            ]
+          }
+        ]
+      },
+      "minecraft:destroy_time" : 0,
+      "minecraft:explosion_resistance" : 0
+    },
+    "events": {
+      "bonemeal_grow": {
+        "sequence": [
+          {"swing": {}},
+          {"decrement_stack": {}},
+          {
+            "run_command": {
+              "command": "particle minecraft:crop_growth_emitter ~ ~1 ~",
+              "target": "self"
+            }
+          },
+          {
+            "randomize": [
+              { "weight": 3 },
+              {
+                "weight": 1,
+                "run_command": {
+                  "command": "structure load big_white_mushroom ~-4 ~ ~-4",
+                  "target": "self"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "grow_stage": {
+        "run_command": {
+          "command": "structure load big_white_mushroom ~-4 ~ ~-4",
+          "target": "self"
+        }
+      }
+    }
+  },
+  "format_version" : "1.16.0"
+}

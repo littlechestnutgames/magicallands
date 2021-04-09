@@ -66,6 +66,25 @@
    "glc:orange_mushroom": {
       "sound": "grass"
    },
+   "glc:magenta_mushroom_planted": {
+      "sound": "grass"
+   },
+   "glc:magenta_mushroom_top": {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "magenta_mushroom_top",
+         "side" : "magenta_mushroom_top",
+         "up" : "magenta_mushroom_top"
+      }
+   },
+   "glc:magenta_mushroom_stem": {
+      "sound": "wood",
+      "textures": {
+         "up": "magenta_mushroom_stem",
+         "down": "magenta_mushroom_stem",
+         "side": "magenta_mushroom_stem"
+      }
+   },
    "glc:planted_lemon": {
       "sound": "grass"
    }

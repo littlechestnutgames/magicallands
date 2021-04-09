@@ -4,7 +4,7 @@
       "identifier": "glc:planted_lemon",
       "properties": {
         "glc:growth_stage": [0, 1, 2, 3, 4]
-      }      
+      }
     },
     "permutations": [
       {

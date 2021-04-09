@@ -24,6 +24,9 @@
       "orange_mushroom": {
         "textures": "textures/items/orange_mushroom"
       },
+      "magenta_mushroom": {
+        "textures": "textures/items/magenta_mushroom"
+      },
       "lemon": {
          "textures": "textures/items/lemon"
        }

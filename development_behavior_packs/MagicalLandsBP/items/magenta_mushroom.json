@@ -1,0 +1,46 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "glc:magenta_mushroom"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "magenta_mushroom"
+            },
+            "minecraft:block_placer": {
+                "block": "glc:magenta_mushroom_planted",
+                "use_on": ["log", "log2", "dirt", "grass", "podzol", "mycelium"]
+            },
+            "minecraft:creative_category":{"parent":"itemGroup.name.nature"},
+            "minecraft:food": {
+                "can_always_eat": false,
+                "nutrition": 1,
+                "saturation_modifier": "poor",
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_duration": 1.5,
+            "minecraft:use_animation": "eat",
+            "minecraft:max_stack_size": 64
+        },
+        "events": {
+            "on_consume": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add_mob_effect": {
+                            "effect": "hunger",
+                            "duration": 5,
+                            "amplifier": 1,
+                            "target": "holder"
+                        }
+                    },
+                    { "weight": 1 }
+                ]
+            }
+        }
+    }
+}
