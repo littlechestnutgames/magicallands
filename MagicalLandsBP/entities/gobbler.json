@@ -14,17 +14,21 @@
         }
       },
       "glc:gobbler_activated": {
-        "minecraft:ambient_sound_interval" :{
-          "event_name" : "ambient.tamed",
-          "range" : 6.0,
-          "value" : 16.0
+        "minecraft:is_chested": {},
+        "minecraft:sittable": {
+          "sit_event": {"event": "glc:on_gobbler_stay"},
+          "stand_event": {"event": "glc:on_gobbler_follow"}
+        },
+        "minecraft:ambient_sound_interval": {
+          "event_name": "ambient.tamed",
+          "range": 6.0,
+          "value": 16.0
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/gobbler_tamed.json"
         },
         "minecraft:healable": {
-          "items": [
-            {
+          "items": [{
               "item": "apple",
               "heal_amount": 20
             },
@@ -49,14 +53,13 @@
         },
         "minecraft:navigation.walk": {
           "can_path_over_water": true,
-          "avoid_damage_blocks": true
+          "avoid_damage_blocks": true,
+          "can_jump": true
         },
-        "minecraft:jump.static": {
-        },
-        "minecraft:can_climb": {
-        },
+        "minecraft:jump.static": {},
+        "minecraft:can_climb": {},
         "minecraft:behavior.float": {
-          "priority": 0
+          "priority": 2
         },
         "minecraft:behavior.panic": {
           "priority": 1,
@@ -65,19 +68,21 @@
         "minecraft:behavior.share_items": {
           "priority": 9,
           "max_dist": 3,
-          "goal_radius":  2.0,
+          "goal_radius": 1.0,
           "speed_multiplier": 0.5,
-          "entity_types": [
-            {
-              "filters": { "test" :  "is_family", "subject" : "other", "value" :  "apple"}
+          "entity_types": [{
+            "filters": {
+              "any_of": [
+                {"test": "is_family", "subject": "other", "value": "fruit"},
+                {"all_of": [
+                  {"test": "is_family", "subject": "other", "value": "player"},
+                  {"test": "is_owner", "subject": "other", "value": true}
+                ]}
+              ]
             }
-          ]
+          }]
         },
         "minecraft:persistent": {},
-        "minecraft:behavior.random_stroll": {
-          "priority": 6,
-          "speed_multiplier": 1.0
-        },
         "minecraft:behavior.look_at_player": {
           "priority": 7,
           "look_distance": 6.0,
@@ -87,69 +92,35 @@
           "priority": 8
         },
         "minecraft:shareables": {
+          "all_items": true,
+          "all_items_max_amount": 64,
+          "all_items_surplus_amount": 1,
+          "all_items_want_amount": 64,
           "items": [
-            {
-              "item": "cobblestone",
-              "want_amount": 64,
-              "surplus_amount": 1,
-              "priority": 0,
-              "stored_in_inventory": true
-            }
+            {"item": "cobblestone"}
           ]
         }
       },
       "glc:gobbler_follow": {
-        "minecraft:behavior.follow_owner": {},
+        "minecraft:behavior.follow_owner": {
+          "priority": 4,
+          "stop_distance": 2,
+          "start_distance": 8
+        },
         "minecraft:behavior.pickup_items": {
-          "priority": 0,
-          "max_dist": 16,
+          "priority": 1,
+          "max_dist": 8,
           "goal_radius": 1,
           "speed_multiplier": 1.5,
           "can_pickup_to_hand_or_equipment": false,
           "can_pickup_any_item": true
-        },
-        "minecraft:interact": {
-          "interactions": {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  { "test": "is_family", "subject": "other", "value": "player" },
-                  { "test": "is_owner", "subject": "other", "value": true }
-                ]
-              },
-              "event": "glc:on_gobbler_stay",
-              "target": "self"
-            },
-            "swing": true,
-            "play_sounds": "",
-            "interact_text": "glc:action.stay"
-          }
         }
       },
-      "glc:gobbler_stay": {
-        "minecraft:interact": {
-          "interactions": {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  { "test": "is_family", "subject": "other", "value": "player" },
-                  { "test": "is_owner", "subject": "other", "value": true }
-                ]
-              },
-              "event": "glc:on_gobbler_follow",
-              "target": "self"
-            },
-            "swing": true,
-            "play_sounds": "",
-            "interact_text": "glc:action.follow"
-          }
-        }
-      },
+      "glc:gobbler_stay": {},
       "minecraft:gobbler_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value":0.5
+          "value": 0.5
         },
         "minecraft:ageable": {
           "duration": 1200,
@@ -186,27 +157,25 @@
           ]
         },
         "minecraft:behavior.breed": {
-          "priority": 0.5,
+          "priority": 0,
           "speed_multiplier": 1.3
         }
       }
     },
     "components": {
       "minecraft:type_family": {
-        "family": [ "magic", "apple", "gobbler", "mob" ]
+        "family": ["magic", "apple", "gobbler", "villager"]
       },
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 0.8
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:health": {
         "value": 1,
         "max": 1
       },
-      "minecraft:movement.basic": {
-      },
+      "minecraft:movement.basic": {},
       "minecraft:movement": {
         "value": 0.3
       },
@@ -228,25 +197,26 @@
         ]
       },
       "minecraft:hurt_on_condition": {
-        "damage_conditions": [
-          {
-            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
-            "cause": "lava",
-            "damage_per_tick": 4
-          }
-        ]
+        "damage_conditions": [{
+          "filters": {
+            "test": "in_lava",
+            "subject": "self",
+            "operator": "==",
+            "value": true
+          },
+          "cause": "lava",
+          "damage_per_tick": 4
+        }]
       },
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      "minecraft:physics": {
-      },
+      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
       },
-      "minecraft:conditional_bandwidth_optimization": {
-      },
+      "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:inventory": {
         "inventory_size": 1,
         "container_type": "none",
@@ -283,9 +253,9 @@
           ]
         },
         "run_command": {
-            "command": "particle minecraft:bleach ~ ~1 ~",
-            "target": "self"
-          }
+          "command": "particle minecraft:bleach ~ ~1 ~",
+          "target": "self"
+        }
       },
       "glc:on_gobbler_follow": {
         "add": {
@@ -298,14 +268,15 @@
             "glc:gobbler_stay"
           ]
         },
-        "run_command": {"command": "particle minecraft:blue_flame_particle ~ ~1 ~", "target": "self"}
+        "run_command": {
+          "command": "particle minecraft:blue_flame_particle ~ ~1 ~",
+          "target": "self"
+        }
       },
       "minecraft:entity_spawned": {
-        "randomize": [
-          {
+        "randomize": [{
             "weight": 95,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:gobbler_adult",
@@ -315,8 +286,7 @@
           },
           {
             "weight": 5,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:gobbler_baby",
@@ -328,8 +298,7 @@
       },
 
       "minecraft:entity_born": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:gobbler_baby",
