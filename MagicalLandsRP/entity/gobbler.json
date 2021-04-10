@@ -3,9 +3,9 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "glc:gobbler",
-      "materials": { "default": "skeleton" },
+      "materials": { "body": "sheep", "rest": "skeleton" },
       "textures": {
-        "default": "textures/entity/gobbler/gobbler"
+        "default": "textures/entity/gobbler/gobbler_white"
       },
       "geometry": {
         "default": "geometry.gobbler"
@@ -14,12 +14,14 @@
         "move": "controller.animation.gobbler.move",
         "walk": "animation.gobbler.walk",
         "top_wobble": "animation.gobbler.top_wobble",
-        "blink": "animation.gobbler.blink"
+        "blink": "animation.gobbler.blink",
+        "sit": "animation.gobbler.sit"
       },
       "scripts": {
         "animate": [
           "move",
-          "blink"
+          "blink",
+          {"sit": "query.is_stunned"}
         ]
       },
       "render_controllers": [ "controller.render.gobbler" ],

@@ -3,7 +3,17 @@
     "render_controllers": {
       "controller.render.gobbler": {
         "geometry": "Geometry.default",
-        "materials": [ { "*": "Material.default" } ],
+        "materials": [
+          { "head": "Material.body" },
+          { "top": "Material.body" },
+          { "left": "Material.rest" },
+          { "right": "Material.rest" },
+          { "leg0": "Material.rest" },
+          { "leg1": "Material.rest" },
+          { "arm0": "Material.rest" },
+          { "arm1": "Material.rest" },
+          { "stem": "Material.rest" }
+        ],
         "textures": [ "Texture.default" ]
       }
     }

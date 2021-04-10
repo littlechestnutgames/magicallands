@@ -1,6 +1,38 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
+		"animation.gobbler.sit": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.52,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, -3, 0]
+					}
+				},
+				"leg0": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [-90, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.52": [0.4, -1, -2]
+					}
+				},
+				"leg1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [-90, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.52": [-0.4, -1, -2]
+					}
+				}
+			}
+		},
 		"animation.gobbler.blink": {
 			"animation_length": 3.0,
 			"bones": {

@@ -4,8 +4,7 @@
     "description": {
       "identifier": "glc:gobbler",
       "is_spawnable": true,
-      "is_summonable": true,
-      "is_experimental": true
+      "is_summonable": true
     },
     "component_groups": {
       "glc:gobbler_not_activated": {
@@ -14,7 +13,9 @@
         }
       },
       "glc:gobbler_activated": {
-        "minecraft:is_chested": {},
+        "minecraft:loot": {
+          "table": "loot_tables/entities/gobbler_tamed.json"
+        },
         "minecraft:sittable": {
           "sit_event": {"event": "glc:on_gobbler_stay"},
           "stand_event": {"event": "glc:on_gobbler_follow"}
@@ -24,8 +25,8 @@
           "range": 6.0,
           "value": 16.0
         },
-        "minecraft:loot": {
-          "table": "loot_tables/entities/gobbler_tamed.json"
+        "minecraft:is_dyeable": {
+          "interact_text": "action.interact.dye"
         },
         "minecraft:healable": {
           "items": [{
@@ -110,14 +111,34 @@
         "minecraft:behavior.pickup_items": {
           "priority": 1,
           "max_dist": 8,
-          "goal_radius": 1,
+          "goal_radius": 2,
           "speed_multiplier": 1.5,
           "can_pickup_to_hand_or_equipment": false,
           "can_pickup_any_item": true
         }
       },
-      "glc:gobbler_stay": {},
-      "minecraft:gobbler_baby": {
+      
+      "glc:gobbler_black": { "minecraft:color": {"value": 0} },
+      "glc:gobbler_blue": { "minecraft:color": {"value": 1} },
+      "glc:gobbler_brown": { "minecraft:color": {"value": 2} },
+      "glc:gobbler_cyan": { "minecraft:color": {"value": 3} },
+      "glc:gobbler_gray": { "minecraft:color": {"value": 4} },
+      "glc:gobbler_green": { "minecraft:color": {"value": 5} },
+      "glc:gobbler_light_blue": { "minecraft:color": {"value": 6} },
+      "glc:gobbler_light_green": { "minecraft:color": {"value": 7} },
+      "glc:gobbler_magenta": { "minecraft:color": {"value": 8} },
+      "glc:gobbler_orange": { "minecraft:color": {"value": 9} },
+      "glc:gobbler_pink": { "minecraft:color": {"value": 10} },
+      "glc:gobbler_purple": { "minecraft:color": {"value": 11} },
+      "glc:gobbler_red": { "minecraft:color": {"value": 12} },
+      "glc:gobbler_silver": { "minecraft:color": {"value": 13} },
+      "glc:gobbler_white": { "minecraft:color": {"value": 14} },
+      "glc:gobbler_yellow": { "minecraft:color": {"value": 15} },
+
+      "glc:gobbler_stay": {
+        "minecraft:is_stunned": {}
+      },
+      "glc:gobbler_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
@@ -137,7 +158,7 @@
           "speed_multiplier": 1.1
         }
       },
-      "minecraft:gobbler_adult": {
+      "glc:gobbler_adult": {
         "minecraft:experience_reward": {
           "on_bred": 5,
           "on_death": "query.last_hit_by_player ? 3 : 0"
@@ -164,7 +185,10 @@
     },
     "components": {
       "minecraft:type_family": {
-        "family": ["magic", "apple", "gobbler", "villager"]
+        "family": ["magic", "apple", "fruit", "gobbler"]
+      },
+      "minecraft:color": {
+        "value": 14
       },
       "minecraft:collision_box": {
         "width": 0.6,
@@ -219,7 +243,7 @@
       "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:inventory": {
         "inventory_size": 1,
-        "container_type": "none",
+        "container_type": "container",
         "private": false,
         "restrict_to_owner": true,
         "can_be_siphoned_from": true,
@@ -251,10 +275,6 @@
           "component_groups": [
             "glc:gobbler_stay"
           ]
-        },
-        "run_command": {
-          "command": "particle minecraft:bleach ~ ~1 ~",
-          "target": "self"
         }
       },
       "glc:on_gobbler_follow": {
@@ -267,10 +287,6 @@
           "component_groups": [
             "glc:gobbler_stay"
           ]
-        },
-        "run_command": {
-          "command": "particle minecraft:blue_flame_particle ~ ~1 ~",
-          "target": "self"
         }
       },
       "minecraft:entity_spawned": {
@@ -279,7 +295,7 @@
             "remove": {},
             "add": {
               "component_groups": [
-                "minecraft:gobbler_adult",
+                "glc:gobbler_adult",
                 "glc:gobbler_not_activated"
               ]
             }
@@ -289,7 +305,7 @@
             "remove": {},
             "add": {
               "component_groups": [
-                "minecraft:gobbler_baby",
+                "glc:gobbler_baby",
                 "glc:gobbler_not_activated"
               ]
             }
@@ -301,7 +317,7 @@
         "remove": {},
         "add": {
           "component_groups": [
-            "minecraft:gobbler_baby",
+            "glc:gobbler_baby",
             "glc:gobbler_activated"
           ]
         }
@@ -310,12 +326,12 @@
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
-            "minecraft:gobbler_baby"
+            "glc:gobbler_baby"
           ]
         },
         "add": {
           "component_groups": [
-            "minecraft:gobbler_adult"
+            "glc:gobbler_adult"
           ]
         }
       }
