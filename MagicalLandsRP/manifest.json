@@ -5,7 +5,7 @@
       "name" : "MagicalLands",
       "platform_locked" : false,
       "uuid" : "100f3eae-651c-4ab2-9f11-0ecf3f968ba2",
-      "version" : [ 0, 0, 1 ],
+      "version" : [ 0, 2, 0 ],
       "min_engine_version" : [ 1, 16, 0 ]
    },
    "modules" : [
@@ -13,7 +13,7 @@
          "description" : "",
          "type" : "resources",
          "uuid" : "d2c234f9-d2a1-3e0a-8989-13207914a3e3",
-         "version" : [ 0, 0, 1 ]
+         "version" : [ 0, 2, 0 ]
       }
    ],
    "metadata": {
