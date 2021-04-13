@@ -2,14 +2,14 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:lemon"
+            "identifier": "glc:durian"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lemon"
+                "texture": "durian"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_lemon",
+                "block": "glc:planted_durian",
                 "use_on": [
                     "leaves",
                     "leaves2",

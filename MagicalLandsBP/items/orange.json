@@ -2,14 +2,14 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:lemon"
+            "identifier": "glc:orange"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lemon"
+                "texture": "orange"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_lemon",
+                "block": "glc:planted_orange",
                 "use_on": [
                     "leaves",
                     "leaves2",

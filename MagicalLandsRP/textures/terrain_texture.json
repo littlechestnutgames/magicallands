@@ -48,6 +48,60 @@
       "magenta_mushroom": {
         "textures": "textures/items/magenta_mushroom"
       },
+      "planted_avacado_0": {
+        "textures": "textures/blocks/planted_avacado_0"
+      },
+      "planted_avacado_1": {
+        "textures": "textures/blocks/planted_avacado_1"
+      },
+      "planted_avacado_2": {
+        "textures": "textures/blocks/planted_avacado_2"
+      },
+      "planted_avacado_3": {
+        "textures": "textures/blocks/planted_avacado_3"
+      },
+      "planted_avacado_4": {
+        "textures": "textures/blocks/planted_avacado_4"
+      },
+      "planted_banana_0": {
+        "textures": "textures/blocks/planted_banana_0"
+      },
+      "planted_banana_1": {
+        "textures": "textures/blocks/planted_banana_1"
+      },
+      "planted_banana_2": {
+        "textures": "textures/blocks/planted_banana_2"
+      },
+      "planted_banana_3": {
+        "textures": "textures/blocks/planted_banana_3"
+      },
+      "planted_banana_4": {
+        "textures": "textures/blocks/planted_banana_4"
+      },
+      "planted_banana_5": {
+        "textures": "textures/blocks/planted_banana_5"
+      },
+      "planted_banana_6": {
+        "textures": "textures/blocks/planted_banana_6"
+      },
+      "planted_banana_7": {
+        "textures": "textures/blocks/planted_banana_7"
+      },
+      "planted_blueberry_0": {
+        "textures": "textures/blocks/planted_blueberry_0"
+      },
+      "planted_blueberry_1": {
+        "textures": "textures/blocks/planted_blueberry_1"
+      },
+      "planted_blueberry_2": {
+        "textures": "textures/blocks/planted_blueberry_2"
+      },
+      "planted_blueberry_3": {
+        "textures": "textures/blocks/planted_blueberry_3"
+      },
+      "planted_blueberry_4": {
+        "textures": "textures/blocks/planted_blueberry_4"
+      },
       "planted_lemon_0": {
         "textures": "textures/blocks/planted_lemon_0"
       },

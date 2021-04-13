@@ -1,9 +1,9 @@
 {
   "minecraft:block": {
     "description": {
-      "identifier": "glc:planted_lemon",
+      "identifier": "glc:planted_banana",
       "properties": {
-        "glc:growth_stage": [0, 1, 2, 3, 4]
+        "glc:growth_stage": [0, 1, 2, 3, 4, 5, 6, 7]
       }
     },
     "permutations": [
@@ -12,7 +12,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_lemon_0",
+              "texture": "planted_banana_0",
               "render_method": "alpha_test"
             }
           }
@@ -23,7 +23,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_lemon_1",
+              "texture": "planted_banana_1",
               "render_method": "alpha_test"
             }
           }
@@ -34,7 +34,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_lemon_2",
+              "texture": "planted_banana_2",
               "render_method": "alpha_test"
             }
           }
@@ -45,7 +45,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_lemon_3",
+              "texture": "planted_banana_3",
               "render_method": "alpha_test"
             }
           }
@@ -56,11 +56,44 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_lemon_4",
+              "texture": "planted_banana_4",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_banana_5",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_banana_6",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('glc:growth_stage') == 7",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "planted_banana_7",
               "render_method": "alpha_test"
             }
           },
-          "minecraft:loot": "loot_tables/blocks/planted_lemon.json"
+          "minecraft:loot": "loot_tables/blocks/planted_banana.json"
         }
       }
     ],
@@ -69,7 +102,7 @@
       "minecraft:loot": "loot_tables/blocks/empty.json",
       "minecraft:material_instances": {
         "*": {
-          "texture": "planted_lemon_0",
+          "texture": "planted_banana_0",
           "render_method": "alpha_test"
         }
       },
@@ -93,7 +126,7 @@
       "minecraft:on_interact": {
         "target": "other",
         "event": "bonemeal_grow_stage",
-        "condition": "query.get_equipped_item_name == 'bone_meal' && query.block_property('glc:growth_stage') < 4"
+        "condition": "query.get_equipped_item_name == 'bone_meal' && query.block_property('glc:growth_stage') < 7"
       },
       "minecraft:placement_filter": {
         "conditions": [{
@@ -130,7 +163,7 @@
           {
             "weight": 1,
             "set_block_property": {
-              "glc:growth_stage": "(query.block_property('glc:growth_stage') < 4) ? query.block_property('glc:growth_stage') + 1 : 4"
+              "glc:growth_stage": "(query.block_property('glc:growth_stage') < 7) ? query.block_property('glc:growth_stage') + 1 : 7"
             }
           }
         ]

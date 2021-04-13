@@ -2,14 +2,14 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:lemon"
+            "identifier": "glc:dragonfruit"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lemon"
+                "texture": "dragonfruit"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_lemon",
+                "block": "glc:planted_dragonfruit",
                 "use_on": [
                     "leaves",
                     "leaves2",

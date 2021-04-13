@@ -27,6 +27,15 @@
       "magenta_mushroom": {
         "textures": "textures/items/magenta_mushroom"
       },
+      "avacado": {
+         "textures": "textures/items/avacado"
+       },
+       "banana": {
+         "textures": "textures/items/banana"
+       },
+       "blueberry": {
+         "textures": "textures/items/blueberry"
+       },
       "lemon": {
          "textures": "textures/items/lemon"
        }

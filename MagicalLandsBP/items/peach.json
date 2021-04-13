@@ -2,14 +2,14 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:lemon"
+            "identifier": "glc:peach"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lemon"
+                "texture": "peach"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_lemon",
+                "block": "glc:planted_peach",
                 "use_on": [
                     "leaves",
                     "leaves2",

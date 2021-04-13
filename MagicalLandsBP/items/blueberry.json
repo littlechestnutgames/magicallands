@@ -2,19 +2,17 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:lemon"
+            "identifier": "glc:blueberry"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lemon"
+                "texture": "blueberry"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_lemon",
+                "block": "glc:planted_blueberry",
                 "use_on": [
-                    "leaves",
-                    "leaves2",
-                    "nether_wart_block",
-                    "warped_wart_block"
+                    "grass",
+                    "dirt"
                 ]
             },
             "minecraft:creative_category":{"parent":"itemGroup.name.nature"},
