@@ -7,6 +7,12 @@
       "is_summonable": true
     },
     "component_groups": {
+      "glc:drop_fruit": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/gobbler_transform.json"
+        },
+        "minecraft:health": {"value": 0}
+      },
       "glc:gobbler_not_activated": {
         "minecraft:loot": {
           "table": "loot_tables/entities/gobbler.json"
@@ -311,6 +317,13 @@
             }
           }
         ]
+      },
+      "magic_wand_used_on": {
+        "add": {
+          "component_groups": [
+            "glc:drop_fruit"
+          ]
+        }
       },
 
       "minecraft:entity_born": {

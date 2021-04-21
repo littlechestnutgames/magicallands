@@ -11,10 +11,9 @@
             "minecraft:block_placer": {
                 "block": "glc:planted_blackberry",
                 "use_on": [
-                    "leaves",
-                    "leaves2",
-                    "nether_wart_block",
-                    "warped_wart_block"
+                    "grass",
+                    "dirt",
+                    "podzol"
                 ]
             },
             "minecraft:creative_category":{"parent":"itemGroup.name.nature"},

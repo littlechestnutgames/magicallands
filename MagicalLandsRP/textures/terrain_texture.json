@@ -87,6 +87,21 @@
       "planted_banana_7": {
         "textures": "textures/blocks/planted_banana_7"
       },
+      "planted_blackberry_0": {
+        "textures": "textures/blocks/planted_blackberry_0"
+      },
+      "planted_blackberry_1": {
+        "textures": "textures/blocks/planted_blackberry_1"
+      },
+      "planted_blackberry_2": {
+        "textures": "textures/blocks/planted_blackberry_2"
+      },
+      "planted_blackberry_3": {
+        "textures": "textures/blocks/planted_blackberry_3"
+      },
+      "planted_blackberry_4": {
+        "textures": "textures/blocks/planted_blackberry_4"
+      },
       "planted_blueberry_0": {
         "textures": "textures/blocks/planted_blueberry_0"
       },
@@ -116,6 +131,51 @@
       },
       "planted_lemon_4": {
         "textures": "textures/blocks/planted_lemon_4"
+      },
+      "planted_lime_0": {
+        "textures": "textures/blocks/planted_lime_0"
+      },
+      "planted_lime_1": {
+        "textures": "textures/blocks/planted_lime_1"
+      },
+      "planted_lime_2": {
+        "textures": "textures/blocks/planted_lime_2"
+      },
+      "planted_lime_3": {
+        "textures": "textures/blocks/planted_lime_3"
+      },
+      "planted_lime_4": {
+        "textures": "textures/blocks/planted_lime_4"
+      },
+      "planted_raspberry_0": {
+        "textures": "textures/blocks/planted_raspberry_0"
+      },
+      "planted_raspberry_1": {
+        "textures": "textures/blocks/planted_raspberry_1"
+      },
+      "planted_raspberry_2": {
+        "textures": "textures/blocks/planted_raspberry_2"
+      },
+      "planted_raspberry_3": {
+        "textures": "textures/blocks/planted_raspberry_3"
+      },
+      "planted_raspberry_4": {
+        "textures": "textures/blocks/planted_raspberry_4"
+      },
+      "planted_strawberry_0": {
+        "textures": "textures/blocks/planted_strawberry_0"
+      },
+      "planted_strawberry_1": {
+        "textures": "textures/blocks/planted_strawberry_1"
+      },
+      "planted_strawberry_2": {
+        "textures": "textures/blocks/planted_strawberry_2"
+      },
+      "planted_strawberry_3": {
+        "textures": "textures/blocks/planted_strawberry_3"
+      },
+      "planted_strawberry_4": {
+        "textures": "textures/blocks/planted_strawberry_4"
       }
    },
    "texture_name" : "atlas.terrain"

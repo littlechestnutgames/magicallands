@@ -12,7 +12,8 @@
                 "block": "glc:planted_blueberry",
                 "use_on": [
                     "grass",
-                    "dirt"
+                    "dirt",
+                    "podzol"
                 ]
             },
             "minecraft:creative_category":{"parent":"itemGroup.name.nature"},

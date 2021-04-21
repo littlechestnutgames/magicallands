@@ -1,0 +1,35 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "glc:magic_wand",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "quartz_tipped_gold_wrapped_magic_wand"
+      },
+      "minecraft:hand_equipped": true,
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:durability": {
+        "damage_chance": 1,
+        "max_durability": 64
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "magic_wand_used_on",
+          "target": "other"
+        }
+      },
+      "minecraft:max_stack_size": 1
+    },
+    "events": {
+      "magic_wand_used_on": {
+        "run_command": {
+          "command": "event entity @s magic_wand_used_on",
+          "target": "other"
+        }
+      }
+    }
+  }
+}

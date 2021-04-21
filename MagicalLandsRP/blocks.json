@@ -85,7 +85,85 @@
          "side": "magenta_mushroom_stem"
       }
    },
+   "glc:planted_avacado": {
+      "sound": "grass"
+   },
+   "glc:planted_banana": {
+      "sound": "grass"
+   },
+   "glc:planted_blackberry": {
+      "sound": "grass"
+   },
+   "glc:planted_blueberry": {
+      "sound": "grass"
+   },
+   "glc:planted_cherry": {
+      "sound": "grass"
+   },
+   "glc:planted_coconut": {
+      "sound": "grass"
+   },
+   "glc:planted_cranberry": {
+      "sound": "grass"
+   },
+   "glc:planted_dragonfruit": {
+      "sound": "grass"
+   },
+   "glc:planted_durian": {
+      "sound": "grass"
+   },
+   "glc:planted_grape": {
+      "sound": "grass"
+   },
+   "glc:planted_kiwi": {
+      "sound": "grass"
+   },
    "glc:planted_lemon": {
+      "sound": "grass"
+   },
+   "glc:planted_lime": {
+      "sound": "grass"
+   },
+   "glc:planted_lychee": {
+      "sound": "grass"
+   },
+   "glc:planted_mango": {
+      "sound": "grass"
+   },
+   "glc:planted_mulberry": {
+      "sound": "grass"
+   },
+   "glc:planted_olive": {
+      "sound": "grass"
+   },
+   "glc:planted_orange": {
+      "sound": "grass"
+   },
+   "glc:planted_peach": {
+      "sound": "grass"
+   },
+   "glc:planted_pear": {
+      "sound": "grass"
+   },
+   "glc:planted_persimmon": {
+      "sound": "grass"
+   },
+   "glc:planted_pineapple": {
+      "sound": "grass"
+   },
+   "glc:planted_plum": {
+      "sound": "grass"
+   },
+   "glc:planted_raspberry": {
+      "sound": "grass"
+   },
+   "glc:planted_starfruit": {
+      "sound": "grass"
+   },
+   "glc:planted_strawberry": {
+      "sound": "grass"
+   },
+   "glc:planted_tomato": {
       "sound": "grass"
    }
 }

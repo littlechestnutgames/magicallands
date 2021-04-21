@@ -2,18 +2,19 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "glc:strawberry"
+            "identifier": "glc:lime"
         },
         "components": {
             "minecraft:icon": {
-                "texture": "strawberry"
+                "texture": "lime"
             },
             "minecraft:block_placer": {
-                "block": "glc:planted_strawberry",
+                "block": "glc:planted_lime",
                 "use_on": [
-                    "grass",
-                    "dirt",
-                    "podzol"
+                    "leaves",
+                    "leaves2",
+                    "nether_wart_block",
+                    "warped_wart_block"
                 ]
             },
             "minecraft:creative_category":{"parent":"itemGroup.name.nature"},

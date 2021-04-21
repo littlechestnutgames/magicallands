@@ -12,7 +12,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_strawberry_0",
+              "texture": "planted_raspberry_0",
               "render_method": "alpha_test"
             }
           }
@@ -23,7 +23,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_strawberry_1",
+              "texture": "planted_raspberry_1",
               "render_method": "alpha_test"
             }
           }
@@ -34,7 +34,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_strawberry_2",
+              "texture": "planted_raspberry_2",
               "render_method": "alpha_test"
             }
           }
@@ -45,7 +45,7 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_strawberry_3",
+              "texture": "planted_raspberry_3",
               "render_method": "alpha_test"
             }
           }
@@ -56,11 +56,11 @@
         "components": {
           "minecraft:material_instances": {
             "*": {
-              "texture": "planted_strawberry_4",
+              "texture": "planted_raspberry_4",
               "render_method": "alpha_test"
             }
           },
-          "minecraft:loot": "loot_tables/blocks/planted_strawberry.json"
+          "minecraft:loot": "loot_tables/blocks/planted_raspberry.json"
         }
       }
     ],
@@ -69,17 +69,22 @@
       "minecraft:loot": "loot_tables/blocks/empty.json",
       "minecraft:material_instances": {
         "*": {
-          "texture": "planted_strawberry_0",
+          "texture": "planted_raspberry_0",
           "render_method": "alpha_test"
         }
       },
-      "minecraft:entity_collision": false,
+      "minecraft:entity_collision": {
+        "origin": [-8, 0, -8],
+        "size": [16, 2, 16]
+      },
       "minecraft:block_light_absorption": 0,
       "minecraft:block_light_emission": 0,
       "minecraft:pick_collision": {
-        "origin": [-3, 12, -3],
-        "size": [6, 4, 6]
+        "origin": [-2, 0, -2],
+        "size": [6, 12, 6]
       },
+      "minecraft:unwalkable": true,
+      "minecraft:friction": 0.25,
       "minecraft:breakonpush": true,
       "minecraft:flammable": {
         "flame_odds": 0,
@@ -91,20 +96,18 @@
         }
       },
       "minecraft:on_interact": {
-        "target": "other",
-        "event": "bonemeal_grow_stage",
-        "condition": "query.get_equipped_item_name == 'bone_meal' && query.block_property('glc:growth_stage') < 4"
+          "target": "other",
+          "event": "bonemeal_grow_stage",
+          "condition": "query.get_equipped_item_name == 'bone_meal' && query.block_property('glc:growth_stage') < 4"
       },
       "minecraft:placement_filter": {
         "conditions": [{
           "block_filter": [
-            "leaves",
-            "leaves2",
-            "nether_wart_block",
-            "warped_wart_block"
+            "grass",
+            "dirt"
           ],
           "allowed_faces": [
-            "down"
+            "up"
           ]
         }]
       },

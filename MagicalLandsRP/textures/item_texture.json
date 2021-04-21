@@ -18,6 +18,11 @@
 	         "textures/items/smoker"
 	      ]
       },
+      "quartz_tipped_gold_wrapped_magic_wand": {
+        "textures": [
+	         "textures/items/quartz_tipped_gold_wrapped_magic_wand"
+	      ]
+      },
       "white_mushroom": {
         "textures": "textures/items/white_mushroom"
       },
@@ -36,8 +41,20 @@
        "blueberry": {
          "textures": "textures/items/blueberry"
        },
-      "lemon": {
-         "textures": "textures/items/lemon"
+       "blackberry": {
+         "textures": "textures/items/blackberry"
+       },
+       "lemon": {
+          "textures": "textures/items/lemon"
+       },
+       "lime": {
+         "textures": "textures/items/lime"
+       },
+       "raspberry": {
+         "textures": "textures/items/raspberry"
+       },
+       "strawberry": {
+         "textures": "textures/items/strawberry"
        }
    },
    "texture_name" : "atlas.items"
