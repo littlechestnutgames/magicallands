@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "glc:magic_wand"
+    },
+    "tags": [ "crafting_table", "magic_altar" ],
+    "pattern": [
+      "  q",
+      " g ",
+      "s  "
+    ],
+    "key": {
+      "s": {
+        "item": "stick"
+      },
+      "q": {
+        "item": "quartz"
+      },
+      "g": {
+        "item": "gold_nugget"
+      }
+    },
+    "result": {
+      "item": "glc:magic_wand"
+    }
+  }
+}

@@ -9,25 +9,39 @@
       "minecraft:icon": {
         "texture": "quartz_tipped_gold_wrapped_magic_wand"
       },
+      "minecraft:repairable": {
+        "repair_items": [
+          {"items": [
+            "glc:magic_wand"
+          ]}
+        ]
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+            "first_person": {
+                "position": [0.3, -1, -2],
+                "rotation": [45, 0, 90]
+            },
+            "third_person": {
+                "position": [-0.7, 0.7, -0.7],
+                "rotation": [45, 0, 45],
+                "scale": [0.0325, 0.0325, 0.0325]
+            }
+        }
+      },
       "minecraft:hand_equipped": true,
       "minecraft:can_destroy_in_creative": false,
       "minecraft:durability": {
         "damage_chance": 1,
         "max_durability": 64
       },
-      "minecraft:on_use": {
-        "on_use": {
-          "event": "magic_wand_used_on",
-          "target": "other"
-        }
-      },
       "minecraft:max_stack_size": 1
     },
     "events": {
       "magic_wand_used_on": {
         "run_command": {
-          "command": "event entity @s magic_wand_used_on",
-          "target": "other"
+          "command": "say Hi",
+          "target": "holder"
         }
       }
     }

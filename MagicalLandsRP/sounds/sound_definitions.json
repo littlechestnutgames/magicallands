@@ -6,6 +6,12 @@
             "sounds": [
                 "sounds/gobbler"
             ]
+        },
+        "magic_wand.shoot": {
+            "category": "neutral",
+            "sounds": [
+                "sounds/wand_shoot"
+            ]
         }
     }
 }

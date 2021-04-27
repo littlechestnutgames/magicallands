@@ -1,29 +1,23 @@
 {
   "format_version": "1.12",
-  "minecraft:recipe_shapeless": {
+  "minecraft:recipe_shaped": {
     "description": {
     "identifier": "glc:empty_soulfire_bottle"
     },
-    "tags": [ "crafting_table" ],
-    "ingredients": [
-      {
-        "item": "minecraft:glass_bottle"
-      },
-      {
-        "item": "minecraft:redstone"
-      },
-      {
-        "item": "minecraft:redstone"
-      },
-      {
-        "item": "minecraft:glowstone_dust"
-      },
-      {
-        "item": "minecraft:glowstone_dust"
-      }
+    "tags": [ "magic_altar" ],
+    "pattern": [
+      " m ",
+      "mbm",
+      "wm "
     ],
-    "result": {
-      "item": "glc:empty_soulfire_bottle"
-    }
+    "key": {
+      "m": "glc:magic_dust",
+      "b": "minecraft:glass_bottle",
+      "w": "glc:magic_wand"
+    },
+    "result": [
+      { "item": "glc:empty_soulfire_bottle" },
+      { "item": "glc:magic_wand"}
+    ]
   }
 }

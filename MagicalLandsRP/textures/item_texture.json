@@ -23,6 +23,11 @@
 	         "textures/items/quartz_tipped_gold_wrapped_magic_wand"
 	      ]
       },
+      "magic_dust": {
+        "textures": [
+	         "textures/items/magic_dust"
+	      ]
+      },
       "white_mushroom": {
         "textures": "textures/items/white_mushroom"
       },
@@ -55,6 +60,9 @@
        },
        "strawberry": {
          "textures": "textures/items/strawberry"
+       },
+       "magic_altar_icon": {
+         "textures": "textures/items/altar_icon"
        }
    },
    "texture_name" : "atlas.items"

@@ -32,3 +32,6 @@ tile.glc:planted_strawberry.name=Planted Strawberry
 item.glc:raspberry=Raspberry
 tile.glc:planted_raspberry.name=Planted Raspberry
 item.glc:magic_wand=Magic Wand
+tile.glc:magic_altar=Magic Altar
+tile.glc:magic_altar.name=Magic Altar
+item.glc:magic_dust=Magic Dust

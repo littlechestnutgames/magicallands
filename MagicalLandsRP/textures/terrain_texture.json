@@ -3,6 +3,9 @@
    "padding" : 8,
    "resource_pack_name" : "MagicalLands",
    "texture_data" : {
+      "altar": {
+        "textures": "textures/blocks/altar"
+      },
       "white_mushroom_top": {
           "textures": "textures/blocks/white_mushroom_top"
       },

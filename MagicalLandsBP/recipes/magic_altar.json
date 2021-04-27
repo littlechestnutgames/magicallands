@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "glc:magic_altar_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "gde",
+      "sss",
+      "pcp"
+    ],
+    "key": {
+      "g": "gold_nugget",
+      "e": "sea_pickle",
+      "d": "glc:magic_dust",
+      "p": "planks",
+      "s": "wooden_slab",
+      "c": "carpet"
+    },
+    "result": "glc:magic_altar"
+  }
+}

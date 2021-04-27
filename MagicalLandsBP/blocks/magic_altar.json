@@ -1,0 +1,162 @@
+{
+    "format_version": "1.16.200.2",
+    "minecraft:block": {
+        "description": {
+            "identifier": "glc:magic_altar",
+            "properties": {
+                "glc:facing_direction": [2, 3, 4, 5]
+            },
+            "is_experimental": true,
+            "register_to_creative_menu": true
+        },
+        "components": {
+            "minecraft:geometry": "geometry.magic_altar",
+            "minecraft:crafting_table": {
+                "grid_size": 3,
+                "crafting_tags": [
+                    "magic_altar"
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                     "texture": "altar",
+                      "render_method": "blend"
+                }
+            },
+            "minecraft:destroy_time": 3,
+            "minecraft:explosion_resistance": 0.2,
+            "minecraft:friction": 0.6,
+            "minecraft:flammable": {
+                "flame_odds": 0.0,
+                "burn_odds": 0.0
+            },
+            "minecraft:map_color": "#A0522D",
+            "minecraft:block_light_absorption": 1.0,
+            "minecraft:block_light_emission": 0.3,
+            "minecraft:on_player_placing": {
+                "event": "glc:set_facing_direction"
+            }
+        },
+        "permutations": [
+            {
+              "condition": "q.block_property('glc:facing_direction') == 2",
+              "components": {
+                  "minecraft:rotation": [ 0, 0, 0 ],
+                  "minecraft:ticking": {
+                    "looping": true,
+                    "range": [1.5, 3.0],
+                    "on_tick": {
+                        "event": "glc:particle_fire_north",
+                        "target": "self"
+                    }
+                  }
+              }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 3",
+              "components": {
+                  "minecraft:rotation": [ 0, 180, 0 ],
+                  "minecraft:ticking": {
+                    "looping": true,
+                    "range": [1.5, 3.0],
+                    "on_tick": {
+                        "event": "glc:particle_fire_south",
+                        "target": "self"
+                    }
+                  }
+              }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 4",
+              "components": {
+                  "minecraft:rotation": [ 0, 90, 0 ],
+                  "minecraft:ticking": {
+                    "looping": true,
+                    "range": [1.5, 3.0],
+                    "on_tick": {
+                        "event": "glc:particle_fire_west",
+                        "target": "self"
+                    }
+                  }
+              }
+            },
+            {
+              "condition": "q.block_property('glc:facing_direction') == 5",
+              "components": { 
+                  "minecraft:rotation": [ 0, 270, 0 ],
+                  "minecraft:ticking": {
+                    "looping": true,
+                    "range": [1.5, 3.0],
+                    "on_tick": {
+                        "event": "glc:particle_fire_east",
+                        "target": "self"
+                    }
+                  }
+              }
+            }
+        ],
+        "events": {
+            "glc:set_facing_direction": {
+                "set_block_property": {
+                    "glc:facing_direction": "query.cardinal_facing_2d"
+                }
+            },
+            "glc:particle_fire_north": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_flame_particle ~0.3325 ~0.67 ~-0.3425"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_smoke_particle ~0.3325 ~0.67 ~-0.3425"
+                        }
+                    }
+                ]
+            },
+            "glc:particle_fire_south": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_flame_particle ~-0.3325 ~0.67 ~0.3425"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_smoke_particle ~-0.3325 ~0.67 ~0.3425"
+                        }
+                    }
+                ]
+            },
+            "glc:particle_fire_west": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_flame_particle ~-0.3325 ~0.67 ~-0.3425"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_smoke_particle ~-0.3325 ~0.67 ~-0.3425"
+                        }
+                    }
+                ]
+            },
+            "glc:particle_fire_east": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_flame_particle ~0.3325 ~0.67 ~0.3425"
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": "particle minecraft:basic_smoke_particle ~0.3325 ~0.67 ~0.3425"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -8,10 +8,7 @@
     },
     "component_groups": {
       "glc:drop_fruit": {
-        "minecraft:loot": {
-          "table": "loot_tables/entities/gobbler_transform.json"
-        },
-        "minecraft:health": {"value": 0}
+
       },
       "glc:gobbler_not_activated": {
         "minecraft:loot": {
@@ -25,6 +22,27 @@
         "minecraft:sittable": {
           "sit_event": {"event": "glc:on_gobbler_stay"},
           "stand_event": {"event": "glc:on_gobbler_follow"}
+        },
+        "minecraft:behavior.stay_while_sitting": {
+          "priority": 0
+        },
+        "minecraft:interact": {
+          "interactions": {
+            "on_interact": {
+              "filters": {"all_of": [
+                {"test": "is_owner", "subject": "other", "value": true},
+                {"test": "has_equipment", "subject": "other", "domain": "hand", "value": "glc:magic_wand"},
+                {"test": "has_equipment", "subject": "other", "domain": "hand", "value": "glc:magic_dust"}
+              ]},
+              "event": "magic_wand_used_on",
+              "target": "self"
+            },
+            "hurt_item": 1,
+            "swing": true,
+            "spawn_items": {
+              "table": "loot_tables/entities/gobbler_transform.json"
+            }
+          }
         },
         "minecraft:ambient_sound_interval": {
           "event_name": "ambient.tamed",
@@ -319,11 +337,19 @@
         ]
       },
       "magic_wand_used_on": {
-        "add": {
-          "component_groups": [
-            "glc:drop_fruit"
-          ]
-        }
+        "sequence": [
+          {
+            "run_command": {
+              "command": "clear @s glc:magic_dust 0 1",
+              "target": "other"
+            }
+          },
+          {
+            "run_command": {
+              "command": "playsound magic_wand.shoot @a[r=8] ~ ~ ~"
+            }
+          }
+        ]
       },
 
       "minecraft:entity_born": {

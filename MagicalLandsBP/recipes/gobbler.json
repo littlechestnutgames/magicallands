@@ -4,10 +4,10 @@
       "description": {
       "identifier": "glc:gobbler_spawn_egg"
       },
-      "tags": [ "crafting_table" ],
+      "tags": [ "magic_altar" ],
       "pattern": [
         "sas",
-        "s s"
+        "sws"
       ],
       "key": {
         "s": {
@@ -15,11 +15,17 @@
         },
         "a": {
           "item": "minecraft:apple"
+        },
+        "w": {
+          "item": "glc:magic_wand"
         }
       },
-      "result": {
-        "item": "glc:gobbler_spawn_egg"
-      }
+      "result": [
+        {
+          "item": "glc:gobbler_spawn_egg"
+        },
+        { "item": "glc:magic_wand" }
+      ]
     }
   }
   

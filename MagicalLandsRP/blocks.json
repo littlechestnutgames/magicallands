@@ -26,6 +26,9 @@
          "side": "white_mushroom_stem"
       }
    },
+   "glc:magic_altar": {
+      "sound": "wood"
+   },
    "glc:white_mushroom_planted": {
       "sound": "grass"
    },
