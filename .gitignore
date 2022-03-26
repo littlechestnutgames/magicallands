@@ -5,3 +5,5 @@ skin_packs
 *.*~
 Screenshots
 .DS_Store
+/build
+/.regolith

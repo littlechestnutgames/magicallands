@@ -1,0 +1,21 @@
+{
+  "name": "Magical Lands",
+  "author": "Lumpy Wizard",
+  "packs": {
+    "behaviorPack": "./packs/MagicalLandsBP",
+    "resourcePack": "./packs/MagicalLandsRP"
+  },
+  "regolith": {
+    "profiles": {
+      "dev": {
+        "filters": [],
+        "export": {
+          "target": "development",
+          "readOnly": false
+        }
+      }
+    },
+    "filterDefinitions": {},
+    "dataPath": "./packs/data"
+  }
+}
